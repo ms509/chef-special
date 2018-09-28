@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HomeModule } from './home/home.module';
 import { MainModule } from './main/main.module';
 import { NgModule } from '@angular/core';
 
@@ -23,7 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     HomeModule,
-    MainModule
+    MainModule,
     AppRoutingModule
   ],
   providers: [],
