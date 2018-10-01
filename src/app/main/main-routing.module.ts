@@ -7,9 +7,9 @@ const routes: Routes = [
   {
     path: '',
     component: MainComponent,
-    resolve: {
-      isAuthenticated: MainAuthResolver
-    }
+    // resolve: {
+    //   isAuthenticated: MainAuthResolver
+    // }
   }
 ];
 

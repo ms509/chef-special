@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
+import { UserService } from '../core'
 
 // import { UserService } from '../core';
 import { take } from 'rxjs/operators';
@@ -8,7 +9,8 @@ import { take } from 'rxjs/operators';
 @Injectable()
 export class MainAuthResolver implements Resolve<boolean> {
   constructor(
-    private router: Router
+    private router: Router,
+    private UserService: UserService
   ) {}
 
   resolve(
@@ -16,7 +18,7 @@ export class MainAuthResolver implements Resolve<boolean> {
     state: RouterStateSnapshot
   ): Observable<boolean> {
 
-    return 1;
+    return this.UserService.isAuthenticated.pipe(take(1));
 
   }
 }
